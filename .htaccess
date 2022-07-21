@@ -1,0 +1,7 @@
+
+#redirect and rewrite my URLs
+
+RewriteEngine On
+RewriteRule ^inc/.*$ index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
